@@ -804,6 +804,114 @@
         }
       },
       "schematics": {}
+    },
+    "luggage-ui-card": {
+      "projectType": "library",
+      "root": "libs/luggage/ui-card",
+      "sourceRoot": "libs/luggage/ui-card/src",
+      "prefix": "flight-workspace",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/luggage/ui-card/tsconfig.lib.json",
+            "project": "libs/luggage/ui-card/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/luggage/ui-card/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/luggage/ui-card/tsconfig.lib.json",
+              "libs/luggage/ui-card/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/luggage/ui-card/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/luggage/ui-card/jest.config.js",
+            "tsConfig": "libs/luggage/ui-card/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/luggage/ui-card/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "bonus-miles": {
+      "projectType": "library",
+      "root": "libs/bonus-miles",
+      "sourceRoot": "libs/bonus-miles/src",
+      "prefix": "flight-workspace",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/bonus-miles/tsconfig.lib.json",
+              "libs/bonus-miles/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/bonus-miles/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/bonus-miles/jest.config.js",
+            "tsConfig": "libs/bonus-miles/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/bonus-miles/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "bonus-miles2": {
+      "projectType": "library",
+      "root": "libs/bonus-miles2",
+      "sourceRoot": "libs/bonus-miles2/src",
+      "prefix": "flight-workspace",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/bonus-miles2/tsconfig.lib.json",
+            "project": "libs/bonus-miles2/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/bonus-miles2/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/bonus-miles2/tsconfig.lib.json",
+              "libs/bonus-miles2/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/bonus-miles2/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/bonus-miles2/jest.config.js",
+            "tsConfig": "libs/bonus-miles2/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/bonus-miles2/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {

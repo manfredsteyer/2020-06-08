@@ -30,7 +30,7 @@
       "tags": ["flights"]
     },
     "logger-lib": {
-      "tags": ["shared"]
+      "tags": ["domain:shared", "type:util"]
     },
     "dashboard-api": {
       "tags": ["dashboard"]
@@ -63,6 +63,15 @@
     },
     "shared-util-auth": {
       "tags": ["domain:shared", "type:util"]
+    },
+    "luggage-ui-card": {
+      "tags": ["domain:luggage", "type:ui"]
+    },
+    "bonus-miles": {
+      "tags": []
+    },
+    "bonus-miles2": {
+      "tags": []
     }
   },
   "tasksRunnerOptions": {

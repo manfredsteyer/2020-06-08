@@ -28,7 +28,12 @@
       ],
       "@flight-workspace/shared/util-auth": [
         "libs/shared/util-auth/src/index.ts"
-      ]
+      ],
+      "@flight-workspace/luggage/ui-card": [
+        "libs/luggage/ui-card/src/index.ts"
+      ],
+      "@flight-workspace/bonus-miles": ["libs/bonus-miles/src/index.ts"],
+      "@flight-workspace/bonus-miles2": ["libs/bonus-miles2/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
