@@ -9,6 +9,10 @@ export interface State {
   flights: Flight[];
 }
 
+export interface FlightBookingAppState {
+  flightBooking: State;
+}
+
 export const initialState: State = {
   flights: [],
 };
