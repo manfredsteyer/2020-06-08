@@ -79,7 +79,7 @@ export class FlightLookaheadComponent implements OnInit {
         const headers = new HttpHeaders()
                             .set('Accept', 'application/json');
 
-        return this.http.get<Flight[]>(url, {params, headers}).pipe(delay(7000));
+        return this.http.get<Flight[]>(url, {params, headers}); //.pipe(delay(7000));
 
     };
 

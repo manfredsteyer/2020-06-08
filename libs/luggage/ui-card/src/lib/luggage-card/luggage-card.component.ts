@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoggerService } from '@my/logger-lib';
+import { LoggerService } from '@flight-workspace/logger-lib';
 
 @Component({
   selector: 'flight-workspace-luggage-card',
