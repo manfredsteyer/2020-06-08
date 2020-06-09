@@ -5,3 +5,5 @@ export const flightsLoaded = createAction(
   "[FlightBooking] Flights Loaded",
   props<{ flights: Flight[] }>()
 );
+
+export const delayFlight = createAction("[FlightBooking] Delay Flight");

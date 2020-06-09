@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Flight, FlightService } from '@flight-workspace/flight-api';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { flightsLoaded } from '../+state/flight-booking.actions';
+import { delayFlight, flightsLoaded } from '../+state/flight-booking.actions';
 import { FlightBookingAppState } from '../+state/flight-booking.reducer';
 
 @Component({
@@ -40,7 +40,7 @@ export class FlightSearchComponent implements OnInit {
   }
 
   delay(): void {
-    this.flightService.delay();
+    this.store.dispatch(delayFlight());
   }
 
 }
