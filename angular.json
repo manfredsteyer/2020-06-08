@@ -9,7 +9,7 @@
       "prefix": "flight-workspace",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/apps/flight-app",
             "index": "apps/flight-app/src/index.html",
@@ -56,7 +56,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
             "browserTarget": "flight-app:build"
           },
@@ -79,11 +79,14 @@
               "apps/flight-app/tsconfig.app.json",
               "apps/flight-app/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/flight-app/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/flight-app/**"
+            ]
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "builder": "ngx-build-plus:karma",
           "options": {
             "jestConfig": "apps/flight-app/jest.config.js",
             "tsConfig": "apps/flight-app/tsconfig.spec.json",
@@ -114,8 +117,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/flight-app-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/flight-app-e2e/**"]
+            "tsConfig": [
+              "apps/flight-app-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/flight-app-e2e/**"
+            ]
           }
         }
       }
@@ -140,7 +148,9 @@
               "apps/dashboard/src/favicon.ico",
               "apps/dashboard/src/assets"
             ],
-            "styles": ["apps/dashboard/src/styles.css"],
+            "styles": [
+              "apps/dashboard/src/styles.css"
+            ],
             "scripts": [],
             "lazyModules": [
               "apps/dashboard/src/app/lazy-dashboard-tile/lazy-dashboard-tile.module"
@@ -195,7 +205,10 @@
               "apps/dashboard/tsconfig.app.json",
               "apps/dashboard/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/dashboard/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/dashboard/**"
+            ]
           }
         },
         "test": {
@@ -230,8 +243,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/dashboard-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/dashboard-e2e/**"]
+            "tsConfig": [
+              "apps/dashboard-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/dashboard-e2e/**"
+            ]
           }
         }
       }
@@ -256,7 +274,9 @@
               "apps/flight-admin/src/favicon.ico",
               "apps/flight-admin/src/assets"
             ],
-            "styles": ["apps/flight-admin/src/styles.css"],
+            "styles": [
+              "apps/flight-admin/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -308,7 +328,10 @@
               "apps/flight-admin/tsconfig.app.json",
               "apps/flight-admin/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/flight-admin/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/flight-admin/**"
+            ]
           }
         },
         "test": {
@@ -343,8 +366,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/flight-admin-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/flight-admin-e2e/**"]
+            "tsConfig": [
+              "apps/flight-admin-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/flight-admin-e2e/**"
+            ]
           }
         }
       }
@@ -375,7 +403,10 @@
               "libs/logger-lib/tsconfig.lib.json",
               "libs/logger-lib/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/logger-lib/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/logger-lib/**"
+            ]
           }
         },
         "test": {
@@ -403,7 +434,10 @@
               "libs/dashboard-api/tsconfig.lib.json",
               "libs/dashboard-api/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/dashboard-api/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/dashboard-api/**"
+            ]
           }
         },
         "test": {
@@ -438,7 +472,9 @@
               "apps/external/src/favicon.ico",
               "apps/external/src/assets"
             ],
-            "styles": ["apps/external/src/styles.css"]
+            "styles": [
+              "apps/external/src/styles.css"
+            ]
           },
           "configurations": {
             "production": {
@@ -484,7 +520,10 @@
               "apps/external/tsconfig.app.json",
               "apps/external/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/external/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/external/**"
+            ]
           }
         },
         "test": {
@@ -518,8 +557,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/external-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/external-e2e/**"]
+            "tsConfig": [
+              "apps/external-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/external-e2e/**"
+            ]
           }
         }
       }
@@ -537,7 +581,10 @@
               "libs/flight-api/tsconfig.lib.json",
               "libs/flight-api/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/flight-api/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/flight-api/**"
+            ]
           }
         },
         "test": {
@@ -565,7 +612,10 @@
               "libs/luggage/domain/tsconfig.lib.json",
               "libs/luggage/domain/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/luggage/domain/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/luggage/domain/**"
+            ]
           }
         },
         "test": {
@@ -608,7 +658,9 @@
               "apps/luggage/src/favicon.ico",
               "apps/luggage/src/assets"
             ],
-            "styles": ["apps/luggage/src/styles.scss"],
+            "styles": [
+              "apps/luggage/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -666,7 +718,10 @@
               "apps/luggage/tsconfig.app.json",
               "apps/luggage/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/luggage/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/luggage/**"
+            ]
           }
         },
         "test": {
@@ -701,8 +756,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/luggage-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/luggage-e2e/**"]
+            "tsConfig": [
+              "apps/luggage-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/luggage-e2e/**"
+            ]
           }
         }
       }
@@ -790,7 +850,10 @@
               "libs/shared/util-auth/tsconfig.lib.json",
               "libs/shared/util-auth/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/util-auth/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/util-auth/**"
+            ]
           }
         },
         "test": {
@@ -830,7 +893,10 @@
               "libs/luggage/ui-card/tsconfig.lib.json",
               "libs/luggage/ui-card/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/luggage/ui-card/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/luggage/ui-card/**"
+            ]
           }
         },
         "test": {
@@ -858,7 +924,10 @@
               "libs/bonus-miles/tsconfig.lib.json",
               "libs/bonus-miles/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/bonus-miles/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/bonus-miles/**"
+            ]
           }
         },
         "test": {
@@ -898,7 +967,10 @@
               "libs/bonus-miles2/tsconfig.lib.json",
               "libs/bonus-miles2/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/bonus-miles2/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/bonus-miles2/**"
+            ]
           }
         },
         "test": {

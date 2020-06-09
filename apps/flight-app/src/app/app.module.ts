@@ -14,13 +14,15 @@ import { HomeComponent } from "./home/home.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { SharedModule } from "./shared/shared.module";
 import { SidebarComponent } from "./sidebar/sidebar.component";
+import { FlightLookaheadComponent } from './lookahead/flight-lookahead.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
     FlightBookingModule,
-
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     FlightCancellingModule,
 
@@ -33,7 +35,8 @@ import { SidebarComponent } from "./sidebar/sidebar.component";
     SidebarComponent,
     NavbarComponent,
     HomeComponent,
-    BasketComponent
+    BasketComponent,
+    FlightLookaheadComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
