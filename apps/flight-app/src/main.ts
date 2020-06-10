@@ -12,11 +12,6 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule);
 
-window['shell'].restartApp7 = function() {
-  
-  platformBrowserDynamic().bootstrapModule(AppModule);
-  
-}
 
 
 
