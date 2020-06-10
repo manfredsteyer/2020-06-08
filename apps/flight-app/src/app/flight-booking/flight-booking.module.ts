@@ -38,10 +38,6 @@ import { TranslateModule } from '@ngx-translate/core';
   providers: [],
   exports: [FlightSearchComponent]
 })
-<<<<<<< HEAD
-export class FlightBookingModule {}
-=======
 export class FlightBookingModule {
   static flightSearchComponent = FlightSearchComponent;
 }
->>>>>>> b7b7f96a82d0bfdc983226f4c7e3b9f9c23a3d83
