@@ -16,7 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@my/logger-lib": ["libs/logger-lib/src/index.ts"],
+      "@flight-workspace/logger-lib": ["libs/logger-lib/src/index.ts"],
       "@flight-workspace/dashboard-api": ["libs/dashboard-api/src/index.ts"],
       "@flight-workspace/flight-api": ["libs/flight-api/src/index.ts"],
       "@flight-workspace/luggage/domain": ["libs/luggage/domain/src/index.ts"],
