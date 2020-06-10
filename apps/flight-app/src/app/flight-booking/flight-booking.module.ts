@@ -36,4 +36,5 @@ import { PassengerSearchComponent } from './passenger-search/passenger-search.co
   ]
 })
 export class FlightBookingModule {
+  static flightSearchComponent = FlightSearchComponent;
 }
