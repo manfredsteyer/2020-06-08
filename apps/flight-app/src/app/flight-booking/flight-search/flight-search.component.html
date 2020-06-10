@@ -1,7 +1,7 @@
 <ng-container *ngIf="flights$ | async as flights">
   <div class="card">
     <div class="header">
-      <h2 class="title">Flight Search</h2>
+      <h2 class="title">{{ 'FLIGHTS.search' | translate }}</h2>
     </div>
     <div class="content">
       <form>
@@ -38,7 +38,7 @@
           </button>
 
           <div *ngIf="flights.length > 0">
-            {{ flights.length }} flights found!
+            {{ 'FLIGHTS.found' | translate: { count: flights.length } }}
           </div>
         </div>
       </form>
