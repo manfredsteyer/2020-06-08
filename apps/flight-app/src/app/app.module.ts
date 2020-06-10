@@ -13,7 +13,7 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { APP_ROUTES } from './app.routes';
 import { BasketComponent } from './basket/basket.component';
-import { FlightBookingModule } from './flight-booking/flight-booking.module';
+// import { FlightBookingModule } from './flight-booking/flight-booking.module';
 import { FlightCancellingModule } from './flight-booking/flight-cancelling/flight-cancelling.module';
 import { HomeComponent } from './home/home.component';
 import { FlightLookaheadComponent } from './lookahead/flight-lookahead.component';
@@ -25,7 +25,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FlightBookingModule,
+    
+    // FlightBookingModule, // importing lazy modules prevents lazy loading!!!
+
     ReactiveFormsModule,
     BrowserAnimationsModule,
     FlightCancellingModule,
