@@ -22,6 +22,7 @@ import { SharedModule } from './shared/shared.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, '/assets/i18n/', '.json');
@@ -31,7 +32,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   imports: [
     BrowserModule,
     HttpClientModule,
-    
+
     // FlightBookingModule, // importing lazy modules prevents lazy loading!!!
 
     ReactiveFormsModule,
@@ -40,7 +41,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
     FlightApiModule.forRoot(),
     SharedModule.forRoot(),
-    
+
     RouterModule.forRoot(APP_ROUTES, {
       preloadingStrategy: PreloadAllModules
     }),
@@ -54,7 +55,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    OAuthModule.forRoot()
   ],
   declarations: [
     AppComponent,
